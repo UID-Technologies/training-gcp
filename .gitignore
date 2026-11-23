@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Local tooling / scratch
+_extract-pdf12.mjs
+.npm/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

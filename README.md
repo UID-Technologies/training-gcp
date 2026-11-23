@@ -24,10 +24,11 @@ Default GCP region used in many labs: **`asia-south1` (Mumbai)** unless noted ot
 | 09 | [09 - Docker and Containerization Fundamentals…](Presentation/09%20-%20Docker-and-Containerization-Fundamentals-Architecture-Dockerfile-and-Image-Management.pdf) | Docker architecture, Dockerfile, image management |
 | 10 | [10 - Introduction to Kubernetes and Container Orchestration](Presentation/10%20-%20Introduction-to-Kubernetes-and-Container-Orchestration.pdf) | Kubernetes concepts |
 | 11 | [11 - Google Kubernetes Engine (GKE)…](Presentation/11%20-%20Google-Kubernetes-Engine-GKE-Architecture-Deployment-Operations-and-Troubleshooting.pdf) | GKE deployment and operations |
+| 12 | [12 - CI/CD on Google Cloud…](Presentation/12%20-%20CICD-on-Google-Cloud-Cloud-Build-Artifact-Registry-and-Cloud-Deploy.pdf) | Cloud Build, Artifact Registry, Cloud Deploy |
 
 > Additional presentation PDFs can be added under `Presentation/` with the same numbering pattern.
 
-**Suggested flow for containers / orchestration:** Presentation **09** → **Lab 09** → Presentation **10** → **Lab 10** → Presentation **11** → **Lab 11**.
+**Suggested flow for containers / orchestration:** Presentation **09** → **Lab 09** → Presentation **10** → **Lab 10** → Presentation **11** → **Lab 11** → Presentation **12** → **Lab 12**.
 
 ---
 
@@ -46,6 +47,7 @@ Default GCP region used in many labs: **`asia-south1` (Mumbai)** unless noted ot
 | 09 | Docker Containerization and Image Management for CloudMart | Docker, Artifact Registry | 75–90 min | [Open lab](Labs/Lab%2009%20-%20Docker%20Containerization%20and%20Image%20Management%20for%20CloudMart.md) |
 | 10 | Kubernetes Orchestration for CloudMart | `kubectl`, GKE Autopilot | 90–120 min | [Open lab](Labs/Lab%2010%20-%20Kubernetes%20Orchestration%20for%20CloudMart.md) |
 | 11 | GKE Operations and Troubleshooting for CloudMart | GKE Standard, HPA, rollouts | 90–120 min | [Open lab](Labs/Lab%2011%20-%20GKE%20Operations%20and%20Troubleshooting%20for%20CloudMart.md) |
+| 12 | CI/CD with Cloud Build and Cloud Run for CloudMart | Cloud Build, Artifact Registry, Cloud Run | 90–120 min | [Open lab](Labs/Lab%2012%20-%20CI%20CD%20with%20Cloud%20Build%20and%20Cloud%20Run%20for%20CloudMart.md) |
 
 ---
 
@@ -95,6 +97,7 @@ Many labs create billable resources (VMs, SQL instances, Bigtable, load balancer
 | 09 | Stop containers; delete images; optional delete Artifact Registry repo |
 | 10 | Delete namespace; **delete GKE cluster** |
 | 11 | Delete namespace; **delete GKE Standard cluster** |
+| 12 | **Delete Cloud Run service**; delete Artifact Registry repo `cloudmart-cicd` |
 
 ---
 
@@ -103,6 +106,7 @@ Many labs create billable resources (VMs, SQL instances, Bigtable, load balancer
 - Labs are **independent** — reorder by module or skill path without prerequisite chains.  
 - Pair **Presentation 09** with **Lab 09** (Docker); **10** with **Lab 10** (Kubernetes intro); **11** with **Lab 11** (GKE ops).  
 - **Lab 06** (Cloud Run) vs **Lab 09** (Docker CLI) vs **Lab 10** (orchestration)—complementary, not sequential.  
+- **Presentation 12** with **Lab 12**: slides cover the full path (including **Cloud Deploy** and multi-env **GKE**); the lab focuses hands-on **Cloud Build → Artifact Registry → Cloud Run** for a shorter standalone exercise.  
 - Confirm learners have required IAM roles before IAM, networking, or data labs.  
 - Enforce cleanup in shared projects to control cost.  
 
