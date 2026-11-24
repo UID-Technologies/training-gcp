@@ -25,10 +25,12 @@ Default GCP region used in many labs: **`asia-south1` (Mumbai)** unless noted ot
 | 10 | [10 - Introduction to Kubernetes and Container Orchestration](Presentation/10%20-%20Introduction-to-Kubernetes-and-Container-Orchestration.pdf) | Kubernetes concepts |
 | 11 | [11 - Google Kubernetes Engine (GKE)…](Presentation/11%20-%20Google-Kubernetes-Engine-GKE-Architecture-Deployment-Operations-and-Troubleshooting.pdf) | GKE deployment and operations |
 | 12 | [12 - CI/CD on Google Cloud…](Presentation/12%20-%20CICD-on-Google-Cloud-Cloud-Build-Artifact-Registry-and-Cloud-Deploy.pdf) | Cloud Build, Artifact Registry, Cloud Deploy |
+| 13 | [13 - Introduction to Infrastructure as Code](Presentation/13%20-%20Introduction-to-Infrastructure-as-Code.pdf) | Terraform, IaC on GCP |
+| 14 | [14 - GCP DevOps Capstone…](Presentation/14%20-%20GCP-DevOps-Capstone-Deploying-a-Retail-API-End-to-End.pdf) | End-to-end DevOps capstone |
 
 > Additional presentation PDFs can be added under `Presentation/` with the same numbering pattern.
 
-**Suggested flow for containers / orchestration:** Presentation **09** → **Lab 09** → Presentation **10** → **Lab 10** → Presentation **11** → **Lab 11** → Presentation **12** → **Lab 12**.
+**Suggested flow:** Labs **01–08** (GCP core services, any order) → **09–12** (containers & CI/CD) → **13** (Terraform) → **14** (capstone integrates IaC + GKE + pipeline).
 
 ---
 
@@ -48,6 +50,8 @@ Default GCP region used in many labs: **`asia-south1` (Mumbai)** unless noted ot
 | 10 | Kubernetes Orchestration for CloudMart | `kubectl`, GKE Autopilot | 90–120 min | [Open lab](Labs/Lab%2010%20-%20Kubernetes%20Orchestration%20for%20CloudMart.md) |
 | 11 | GKE Operations and Troubleshooting for CloudMart | GKE Standard, HPA, rollouts | 90–120 min | [Open lab](Labs/Lab%2011%20-%20GKE%20Operations%20and%20Troubleshooting%20for%20CloudMart.md) |
 | 12 | CI/CD with Cloud Build and Cloud Run for CloudMart | Cloud Build, Artifact Registry, Cloud Run | 90–120 min | [Open lab](Labs/Lab%2012%20-%20CI%20CD%20with%20Cloud%20Build%20and%20Cloud%20Run%20for%20CloudMart.md) |
+| 13 | Terraform Infrastructure as Code for CloudMart | Terraform, Google provider | 75–90 min | [Open lab](Labs/Lab%2013%20-%20Terraform%20Infrastructure%20as%20Code%20for%20CloudMart.md) |
+| 14 | CloudMart DevOps Capstone End-to-End | Terraform, GKE, Cloud Build, Redis API | 4–6 hours | [Open lab](Labs/Lab%2014%20-%20CloudMart%20DevOps%20Capstone%20End-to-End.md) |
 
 ---
 
@@ -98,6 +102,8 @@ Many labs create billable resources (VMs, SQL instances, Bigtable, load balancer
 | 10 | Delete namespace; **delete GKE cluster** |
 | 11 | Delete namespace; **delete GKE Standard cluster** |
 | 12 | **Delete Cloud Run service**; delete Artifact Registry repo `cloudmart-cicd` |
+| 13 | **`terraform destroy`** (VM, VPC, bucket, firewall) |
+| 14 | Delete namespace; **`terraform destroy`** (GKE, VPC, registry); remove images |
 
 ---
 
@@ -107,6 +113,7 @@ Many labs create billable resources (VMs, SQL instances, Bigtable, load balancer
 - Pair **Presentation 09** with **Lab 09** (Docker); **10** with **Lab 10** (Kubernetes intro); **11** with **Lab 11** (GKE ops).  
 - **Lab 06** (Cloud Run) vs **Lab 09** (Docker CLI) vs **Lab 10** (orchestration)—complementary, not sequential.  
 - **Presentation 12** with **Lab 12**: slides cover the full path (including **Cloud Deploy** and multi-env **GKE**); the lab focuses hands-on **Cloud Build → Artifact Registry → Cloud Run** for a shorter standalone exercise.  
+- **Presentation 13** with **Lab 13** (Terraform). **Presentation 14** with **Lab 14** (capstone): **Node.js/Express + Redis**, **`kubectl apply`**, **`gcloud builds submit`**; add **Helm/GitHub triggers** per deck if desired.  
 - Confirm learners have required IAM roles before IAM, networking, or data labs.  
 - Enforce cleanup in shared projects to control cost.  
 
